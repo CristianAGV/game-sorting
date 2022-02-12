@@ -1,37 +1,58 @@
 .App {
-  text-align: center;
+  width: 80%;
+  margin: 5% auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movies-container h2 {
+  font-size: 0.8rem;
+  color: whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movies-container img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.movies-container img:hover {
+  transform: scale(1.05);
+}
+
+.charging-layout {
+  position: absolute;
+  inset: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
+.spinner {
+  font-size: 3rem;
+  color: whitesmoke;
+  animation: spinnerRotation 3s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.platforms {
+  font-size: 0.7rem;
+  color: rgba(245, 245, 245, 0.76);
+  margin-bottom: 5px;
+}
+
+.platforms span {
+  margin-right: 5px;
+}
+
+@keyframes spinnerRotation {
   to {
     transform: rotate(360deg);
   }

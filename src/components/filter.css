@@ -1,0 +1,21 @@
+.button-container {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 5px;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 96, 238, 0.667);
+  background: transparent;
+  color: rgba(20, 96, 238, 0.667);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.active {
+  color: #fff;
+  background: rgba(20, 96, 238, 0.667);
+}
